@@ -1,17 +1,18 @@
-import React from 'react'
-import Button from './Button'
+import React from "react";
+import Button from "./Button";
+import CardStyles from "../Components/Styles/Card.module.css";
 
-const Card = ({nombre, email}) => {
-    //console.log(props);
-    //const { nombre, email} = props;
+const Card = ({ recipe }) => {
   return (
-    <>
-        <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="" width={100}/>
-        <h4>Nombre: {nombre}</h4>
-        <h4>Email: {email}</h4>
-        <Button>Ver detalle</Button>
-    </>
-  )
-}
+    <div className= {CardStyles.cardContainer}>
+      {/* {console.log(recipe)} */}
 
-export default Card
+      <img src={recipe.img} alt="" className= {CardStyles.cardImg}/>
+      <h3>{recipe.tipo}</h3>
+      <h4>{recipe.precio}</h4>
+      <Button>Ver detalle</Button>
+    </div>
+  );
+};
+
+export default Card;
