@@ -3,7 +3,7 @@ import React from 'react'
 const Button = (props) => {
     console.log(props);
   return (
-    <button>{props.children}</button>
+    <button disabled={props.disabled} onClick={props.onClick}>{props.children}</button>
   )
 }
 
